@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 const whitelist = [
-    "https://pensdown-staging.firebaseapp.com",
+    "http://localhost:3000",
   ];
   app.use(
     cors({
