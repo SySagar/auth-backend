@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import appRoutes from "./routes/auth.js";
+import welcomeRoutes from "./routes/welcome.js";
 import DBConnect from "./config/db.js";
 import dotenv from 'dotenv';
 
@@ -31,6 +32,7 @@ DBConnect();
 
 //routes
 app.use("/auth", appRoutes);
+app.use("/", welcomeRoutes);
 
 app.listen(5000, () => {
   console.log("🚀 Server is running on port 5000");
